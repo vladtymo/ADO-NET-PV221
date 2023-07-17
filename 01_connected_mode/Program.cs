@@ -1,4 +1,5 @@
-﻿using System.Data.Common;
+﻿using System.Configuration;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Text;
@@ -48,8 +49,10 @@ namespace _01_connected_mode
             reader.Close();
         }
 
-        public SportShopManager(string connectionStr)
+        public SportShopManager(string? connectionStr = null)
         {
+            connectionStr ??= ConfigurationManager.ConnectionStrings["LocalDB"].ConnectionString;
+
             connection = new SqlConnection(connectionStr);
             connection.Open();
         }
@@ -132,27 +135,29 @@ namespace _01_connected_mode
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            SportShopManager manager = new("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SportShop;Integrated Security=True;Connect Timeout=2;");
+            SportShopManager manager = new();
 
             manager.ShowAllProducts();
             manager.ShowAllSalles();
 
-            var item = manager.FindProduct("Ремінь");
-            Console.WriteLine(item);
+            //var item = manager.FindProduct("Ремінь");
+            //Console.WriteLine(item);
 
-            manager.UpdatePrice(3420, 1);
-            manager.AddProduct(new Product()
-            {
-                Name = "White Kvass",
-                CostPrice = 90,
-                Price = 135,
-                Producer = "Germany",
-                Quantity = 23,
-                Type = "Sport Drinks"
-            });
-            manager.Delete(9);
+            //manager.UpdatePrice(3420, 1);
+            //manager.AddProduct(new Product()
+            //{
+            //    Name = "White Kvass",
+            //    CostPrice = 90,
+            //    Price = 135,
+            //    Producer = "Germany",
+            //    Quantity = 23,
+            //    Type = "Sport Drinks"
+            //});
+            //manager.Delete(9);
 
-            manager.ShowAllProducts();
+            //manager.ShowAllProducts();
+
+            Console.ReadKey();
         }
     }
 }
