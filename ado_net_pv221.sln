@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data_access", "data_access\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_wpf_client", "01_wpf_client\01_wpf_client.csproj", "{1F59E9C4-D932-48FB-842D-77AAD22FA75D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_dataset", "02_dataset\02_dataset.csproj", "{7702A4B1-2A6F-4886-B4F5-06BB5C6A9B39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_dataset", "02_dataset\02_dataset.csproj", "{7702A4B1-2A6F-4886-B4F5-06BB5C6A9B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_linq_to_sql", "03_linq_to_sql\03_linq_to_sql.csproj", "{74FFB4C9-5F72-46C1-89FF-013283006FBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7702A4B1-2A6F-4886-B4F5-06BB5C6A9B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7702A4B1-2A6F-4886-B4F5-06BB5C6A9B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7702A4B1-2A6F-4886-B4F5-06BB5C6A9B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74FFB4C9-5F72-46C1-89FF-013283006FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FFB4C9-5F72-46C1-89FF-013283006FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FFB4C9-5F72-46C1-89FF-013283006FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74FFB4C9-5F72-46C1-89FF-013283006FBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
